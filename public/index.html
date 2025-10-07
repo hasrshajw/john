@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to JSON Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to JSON Extractor</h1>
+        <p>Enter a sentence and let Gemini extract the key information into a JSON format.</p>
+        
+        <textarea id="inputText" placeholder="e.g., Jane Miller, 28 years old, is a data scientist working at Google in California."></textarea>
+        
+        <button id="submitButton">
+            <span class="button-text">Extract Information</span>
+        </button>
+        
+        <h2>Result</h2>
+        <pre id="resultJson"><code>{}</code></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

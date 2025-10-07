@@ -1,0 +1,13 @@
+[build]
+  # Directory with the static frontend files
+  publish = "public"
+  # Directory with our serverless functions
+  functions = "netlify/functions"
+
+# Rule to make our function URL cleaner
+[[redirects]]
+  # Redirect any request from /api/*...
+  from = "/api/*"
+  # ...to the corresponding Netlify function
+  to = "/.netlify/functions/:splat"
+  status = 200 # 200 means this is a rewrite, not a redirect
