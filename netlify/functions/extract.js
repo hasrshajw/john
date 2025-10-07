@@ -5,7 +5,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // FINAL CHANGE: Using "gemini-pro" which is the most compatible model
 // now that your SDK is updated to use the correct v1beta API.
-const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // Sticking with the newer one that is usually available after Vertex AI is enabled.
 
 exports.handler = async (event) => {
   // We only want to handle POST requests.
@@ -50,3 +50,4 @@ exports.handler = async (event) => {
     };
   }
 };
+
